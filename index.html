@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equus — Full-Stack Разработка</title>
+  <link rel="icon" type="image/jpeg" href="images/equus logo.jpg">
+  <meta name="description"
+    content="Equus — разработка веб- и мобильных приложений любой сложности. Лендинги, CRM-системы, мобильные приложения на Flutter, Next.js, Django.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ═══════════ NAVIGATION ═══════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav__container">
+      <a href="#hero" class="nav__logo">
+        <img src="images/equus logo.jpg" alt="Equus Logo" class="nav__logo-icon">
+        <span class="nav__logo-text">Equus</span>
+      </a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#projects" class="nav__link" data-i18n="nav.projects">Проекты</a></li>
+        <li><a href="#tech" class="nav__link" data-i18n="nav.tech">Технологии</a></li>
+        <li><a href="#advantages" class="nav__link" data-i18n="nav.advantages">Преимущества</a></li>
+        <li><a href="#contact" class="nav__link" data-i18n="nav.contact">Контакты</a></li>
+      </ul>
+      <div class="nav__actions">
+        <button class="nav__theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5" />
+            <path
+              d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+          </svg>
+        </button>
+        <button class="nav__lang-toggle" id="langToggle">EN</button>
+        <button class="nav__burger" id="navBurger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <div class="hero__orb hero__orb--1"></div>
+      <div class="hero__orb hero__orb--2"></div>
+      <div class="hero__orb hero__orb--3"></div>
+      <div class="hero__grid"></div>
+    </div>
+    <div class="hero__content container">
+      <div class="hero__badge reveal" data-i18n="hero.badge">Разработка любой сложности</div>
+      <h1 class="hero__title reveal">
+        <span data-i18n="hero.title1">Создаём цифровые</span><br>
+        <span class="hero__title--gradient" data-i18n="hero.title2">продукты</span>
+        <span data-i18n="hero.title3"> которые работают</span>
+      </h1>
+      <p class="hero__subtitle reveal" data-i18n="hero.subtitle">
+        Полный цикл разработки: от лендингов и корпоративных сайтов до CRM-систем и мобильных приложений.
+        Продакшен-проекты с реальными пользователями.
+      </p>
+      <div class="hero__cta reveal">
+        <a href="#projects" class="btn btn--primary" data-i18n="hero.cta1">Смотреть проекты</a>
+        <a href="#contact" class="btn btn--outline" data-i18n="hero.cta2">Связаться</a>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ STATS ═══════════ -->
+  <section class="stats" id="stats">
+    <div class="container stats__grid">
+      <div class="stats__item reveal">
+        <span class="stats__number" data-count="6">0</span><span class="stats__plus">+</span>
+        <span class="stats__label" data-i18n="stats.projects">Проектов завершено</span>
+      </div>
+      <div class="stats__item reveal">
+        <span class="stats__number" data-count="3">0</span><span class="stats__plus">+</span>
+        <span class="stats__label" data-i18n="stats.mobile">Мобильных приложений</span>
+      </div>
+      <div class="stats__item reveal">
+        <span class="stats__number" data-count="2">0</span>
+        <span class="stats__label" data-i18n="stats.production">Проекта в продакшене</span>
+      </div>
+      <div class="stats__item reveal">
+        <span class="stats__number" data-count="3">0</span>
+        <span class="stats__label" data-i18n="stats.startups">Стартапа на запуске</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ PROJECTS ═══════════ -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag" data-i18n="projects.tag">Портфолио</span>
+        <h2 class="section-title" data-i18n="projects.title">Проекты</h2>
+        <p class="section-desc" data-i18n="projects.desc">Реальные проекты — от лендингов до сложных CRM-платформ с
+          мобильными приложениями</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="projects__filters reveal">
+        <button class="projects__filter active" data-filter="all" data-i18n="projects.all">Все</button>
+        <button class="projects__filter" data-filter="landing" data-i18n="projects.landings">Лендинги</button>
+        <button class="projects__filter" data-filter="platform" data-i18n="projects.platforms">Платформы</button>
+        <button class="projects__filter" data-filter="mobile" data-i18n="projects.mobileApps">Мобильные</button>
+      </div>
+
+      <!-- ── Category 1: Landings ── -->
+      <div class="projects__category reveal" id="cat-landings">
+        <div class="category-header">
+          <div class="category-header__icon">🌐</div>
+          <div>
+            <h3 class="category-header__title" data-i18n="cat1.title">Лендинги и сайты-визитки</h3>
+            <p class="category-header__desc" data-i18n="cat1.desc">Быстрые, современные, адаптивные сайты для бизнеса —
+              конверсия и первое впечатление</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="projects__grid">
+
+        <!-- Erai-Pharm Site -->
+        <article class="project-card reveal" data-category="landing">
+          <div class="project-card__image">
+            <img src="images/erai-pharm-site.png" alt="Erai-Pharm" loading="lazy">
+            <div class="project-card__overlay">
+              <a href="https://www.erai.kg/" target="_blank" rel="noopener" class="project-card__link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="tag tag--next">Next.js</span>
+              <span class="tag tag--react">React</span>
+            </div>
+            <h4 class="project-card__title">Erai-Pharm</h4>
+            <p class="project-card__desc" data-i18n="p.erai.desc">Корпоративный сайт-визитка для фармацевтической
+              компании. Современный дизайн, адаптивная вёрстка, высокая скорость загрузки. Server-side rendering для
+              SEO.</p>
+            <div class="project-card__footer">
+              <span class="project-card__type" data-i18n="p.erai.type">Корпоративный сайт</span>
+              <a href="https://www.erai.kg/" target="_blank" rel="noopener" class="project-card__visit"
+                data-i18n="p.visit">Посмотреть →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ZealOn Landing -->
+        <article class="project-card reveal" data-category="landing">
+          <div class="project-card__image">
+            <img src="images/zealon-landing.png" alt="ZealOn Landing" loading="lazy">
+            <div class="project-card__overlay">
+              <a href="https://www.zealon.ai/" target="_blank" rel="noopener" class="project-card__link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="tag tag--html">HTML</span>
+              <span class="tag tag--css">CSS</span>
+              <span class="tag tag--js">JavaScript</span>
+            </div>
+            <h4 class="project-card__title">ZealOn</h4>
+            <p class="project-card__desc" data-i18n="p.zealon_land.desc">Промо-лендинг для мобильного приложения ZealOn
+              — платформы быстрого найма. Анимации, продающая структура, мобильная адаптация.</p>
+            <div class="project-card__footer">
+              <span class="project-card__type" data-i18n="p.zealon_land.type">Промо-лендинг</span>
+              <a href="https://www.zealon.ai/" target="_blank" rel="noopener" class="project-card__visit"
+                data-i18n="p.visit">Посмотреть →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Mashvara Landing -->
+        <article class="project-card reveal" data-category="landing">
+          <div class="project-card__image">
+            <img src="images/mashvara-landing.png" alt="Mashvara Landing" loading="lazy">
+            <div class="project-card__overlay">
+              <a href="https://mashvara.ai/" target="_blank" rel="noopener" class="project-card__link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="tag tag--html">HTML</span>
+              <span class="tag tag--css">CSS</span>
+              <span class="tag tag--js">JavaScript</span>
+            </div>
+            <h4 class="project-card__title">Mashvara</h4>
+            <p class="project-card__desc" data-i18n="p.mashvara_land.desc">Промо-лендинг для AI-платформы Mashvara —
+              сервиса валидации бизнес-идей. Чистый дизайн, продуманная структура для конверсии.</p>
+            <div class="project-card__footer">
+              <span class="project-card__type" data-i18n="p.mashvara_land.type">Промо-лендинг</span>
+              <a href="https://mashvara.ai/" target="_blank" rel="noopener" class="project-card__visit"
+                data-i18n="p.visit">Посмотреть →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- MaxMetall -->
+        <article class="project-card reveal" data-category="landing">
+          <div class="project-card__image">
+            <img src="images/maxmetall-site.png" alt="MaxMetall" loading="lazy">
+            <div class="project-card__overlay">
+              <a href="https://maxmetall.kg/" target="_blank" rel="noopener" class="project-card__link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="tag tag--html">HTML</span>
+              <span class="tag tag--css">CSS</span>
+              <span class="tag tag--js">JavaScript</span>
+              <span class="tag tag--seo">SEO</span>
+            </div>
+            <h4 class="project-card__title">MaxMetall</h4>
+            <p class="project-card__desc" data-i18n="p.maxmetall.desc">Лендинг для металлургической компании с фокусом
+              на SEO-оптимизацию. Сайт выведен в топ поисковой выдачи в своей нише. Дизайн логотипа включён в проект.
+            </p>
+            <div class="project-card__footer">
+              <span class="project-card__type" data-i18n="p.maxmetall.type">Лендинг · SEO</span>
+              <a href="https://maxmetall.kg/" target="_blank" rel="noopener" class="project-card__visit"
+                data-i18n="p.visit">Посмотреть →</a>
+            </div>
+          </div>
+          <div class="project-card__badge-seo" data-i18n="p.maxmetall.seo">🔍 ТОП выдачи в нише</div>
+        </article>
+
+        <!-- ── Category 2: Web Platforms ── -->
+      </div>
+
+      <div class="projects__category reveal" id="cat-platforms">
+        <div class="category-header">
+          <div class="category-header__icon">⚙️</div>
+          <div>
+            <h3 class="category-header__title" data-i18n="cat2.title">Веб-платформы и CRM</h3>
+            <p class="category-header__desc" data-i18n="cat2.desc">Масштабные системы с админкой, ролями, бизнес-логикой
+              и интеграциями</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="projects__grid projects__grid--featured">
+        <!-- PharmZnanie -->
+        <article class="project-card project-card--featured reveal" data-category="platform"
+          data-gallery='["images/pharmznanie-site.png","images/pharmznanie/pharmznanie-site-2.png","images/pharmznanie/pharmznanie-site-3.png","images/pharmznanie/pharmznanie-site-4.png","images/pharmznanie/pharmznanie-site-5.png","images/pharmznanie/photo_1_2026-03-24_17-43-32.jpg","images/pharmznanie/photo_2_2026-03-24_17-43-32.jpg","images/pharmznanie/photo_3_2026-03-24_17-43-32.jpg","images/pharmznanie/photo_4_2026-03-24_17-43-32.jpg","images/pharmznanie/photo_5_2026-03-24_17-43-32.jpg"]'
+          data-gallery-title="PharmZnanie CRM">
+          <div class="project-card__image project-card__image--wide project-card__image--clickable">
+            <img src="images/pharmznanie-site.png" alt="PharmZnanie" loading="lazy">
+            <div class="project-card__overlay project-card__overlay--gallery">
+              <div class="project-card__gallery-hint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                  <rect x="2" y="2" width="20" height="20" rx="2" />
+                  <circle cx="8.5" cy="8.5" r="1.5" />
+                  <path d="M21 15l-5-5L5 21" />
+                </svg>
+                <span data-i18n="p.gallery">Смотреть скриншоты</span>
+              </div>
+            </div>
+            <div class="project-card__live-badge" data-i18n="p.live">🟢 В продакшене</div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="tag tag--next">Next.js</span>
+              <span class="tag tag--django">Django</span>
+              <span class="tag tag--flutter">Flutter</span>
+              <span class="tag tag--python">Python</span>
+              <span class="tag tag--postgres">PostgreSQL</span>
+            </div>
+            <h4 class="project-card__title">PharmZnanie CRM</h4>
+            <p class="project-card__desc" data-i18n="p.pharmznanie.desc">
+              Полноценная CRM-платформа для образовательного портала в фармацевтической отрасли. Включает систему
+              обучения с уроками и курсами, подробную админ-панель, генерацию приказов и удостоверений, программу
+              лояльности, многоролевую систему (куратор, производитель, администратор). Проект в продакшене 2+ месяцев с
+              реальными пользователями. Полная миграция контента и пользователей со старой платформы.
+            </p>
+            <div class="project-card__features">
+              <div class="feature-tag" data-i18n="p.pharmznanie.f1">📚 Система обучения</div>
+              <div class="feature-tag" data-i18n="p.pharmznanie.f2">👥 Мультиролевая система</div>
+              <div class="feature-tag" data-i18n="p.pharmznanie.f3">📄 Генерация документов</div>
+              <div class="feature-tag" data-i18n="p.pharmznanie.f4">🎁 Программа лояльности</div>
+              <div class="feature-tag" data-i18n="p.pharmznanie.f5">📱 Google Play</div>
+              <div class="feature-tag" data-i18n="p.pharmznanie.f6">🔄 Миграция данных</div>
+            </div>
+            <div class="project-card__footer">
+              <span class="project-card__type" data-i18n="p.pharmznanie.type">CRM · Веб + Мобайл</span>
+              <a href="https://pharmznanie.kg" target="_blank" rel="noopener" class="project-card__visit"
+                data-i18n="p.visit">Посмотреть →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- ── Category 3: Mobile Apps ── -->
+      <div class="projects__category reveal" id="cat-mobile">
+        <div class="category-header">
+          <div class="category-header__icon">📱</div>
+          <div>
+            <h3 class="category-header__title" data-i18n="cat3.title">Мобильные приложения</h3>
+            <p class="category-header__desc" data-i18n="cat3.desc">Кроссплатформенные приложения на Flutter с серверной
+              частью на Django</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="projects__grid">
+        <!-- Erai-Pharm App -->
+        <article class="project-card reveal" data-category="mobile"
+          data-gallery='["images/erai-pharm/main.jpg","images/erai-pharm/photo_1_2026-03-24_22-46-19.jpg","images/erai-pharm/photo_2_2026-03-24_22-46-19.jpg","images/erai-pharm/photo_3_2026-03-24_22-46-19.jpg"]'
+          data-gallery-title="Erai-Pharm App">
+          <div class="project-card__image project-card__image--mobile project-card__image--clickable">
+            <img src="images/erai-pharm/main.jpg" alt="Erai-Pharm App" loading="lazy">
+            <div class="project-card__overlay project-card__overlay--gallery">
+              <div class="project-card__gallery-hint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                  <rect x="2" y="2" width="20" height="20" rx="2" />
+                  <circle cx="8.5" cy="8.5" r="1.5" />
+                  <path d="M21 15l-5-5L5 21" />
+                </svg>
+                <span data-i18n="p.gallery">Смотреть скриншоты</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="tag tag--flutter">Flutter</span>
+              <span class="tag tag--django">Django</span>
+              <span class="tag tag--1c">1С</span>
+            </div>
+            <h4 class="project-card__title">Erai-Pharm App</h4>
+            <p class="project-card__desc" data-i18n="p.erai_app.desc">
+              Мобильное приложение для фармацевтической сети. Программа лояльности, прайс-чекер, карта аптек,
+              онлайн-магазин. Разработаны API-эндпоинты для интеграции с 1С аптечной сети.
+            </p>
+            <div class="project-card__features">
+              <div class="feature-tag" data-i18n="p.erai_app.f1">💳 Программа лояльности</div>
+              <div class="feature-tag" data-i18n="p.erai_app.f2">🗺️ Карта аптек</div>
+              <div class="feature-tag" data-i18n="p.erai_app.f3">🔗 Интеграция 1С</div>
+              <div class="feature-tag" data-i18n="p.erai_app.f4">🛒 Онлайн-магазин</div>
+            </div>
+            <div class="project-card__footer">
+              <span class="project-card__type" data-i18n="p.erai_app.type">Мобильное приложение</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ZealOn App -->
+        <article class="project-card reveal" data-category="mobile"
+          data-gallery='["images/zealon/main-screen.jpg","images/zealon/feed_candidate.jpg","images/zealon/feed_jobs.jpg","images/zealon/profile.png"]'
+          data-gallery-title="ZealOn">
+          <div class="project-card__image project-card__image--mobile project-card__image--clickable">
+            <img src="images/zealon/main-screen.jpg" alt="ZealOn App" loading="lazy">
+            <div class="project-card__overlay project-card__overlay--gallery">
+              <div class="project-card__gallery-hint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                  <rect x="2" y="2" width="20" height="20" rx="2" />
+                  <circle cx="8.5" cy="8.5" r="1.5" />
+                  <path d="M21 15l-5-5L5 21" />
+                </svg>
+                <span data-i18n="p.gallery">Смотреть скриншоты</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="tag tag--flutter">Flutter</span>
+              <span class="tag tag--django">Django</span>
+              <span class="tag tag--ai">AI</span>
+            </div>
+            <h4 class="project-card__title">ZealOn</h4>
+            <p class="project-card__desc" data-i18n="p.zealon_app.desc">
+              Стартап-приложение для быстрого найма — «Tinder для соискателей и работодателей». Свайп-механика,
+              видеопитч, AI-функции, геолокация, анонимный просмотр против предвзятости. Многоролевая система, подписки,
+              верификация.
+            </p>
+            <div class="project-card__features">
+              <div class="feature-tag" data-i18n="p.zealon_app.f1">👆 Свайп-найм</div>
+              <div class="feature-tag" data-i18n="p.zealon_app.f2">🎥 Видео-питч</div>
+              <div class="feature-tag" data-i18n="p.zealon_app.f3">🤖 AI-функции</div>
+              <div class="feature-tag" data-i18n="p.zealon_app.f4">📍 Геолокация</div>
+            </div>
+            <div class="project-card__footer">
+              <span class="project-card__type" data-i18n="p.zealon_app.type">Стартап · Мобильное приложение</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Mashvara App -->
+        <article class="project-card reveal" data-category="mobile"
+          data-gallery='["images/mashvara/main.jpg","images/mashvara/photo_2026-03-24_17-42-17.jpg","images/mashvara/photo_2026-03-24_17-42-23.jpg","images/mashvara/photo_2026-03-24_17-42-28.jpg","images/mashvara/photo_2026-03-24_17-42-37.jpg","images/mashvara/photo_2026-03-24_17-42-41.jpg"]'
+          data-gallery-title="Mashvara">
+          <div class="project-card__image project-card__image--mobile project-card__image--clickable">
+            <img src="images/mashvara/main.jpg" alt="Mashvara App" loading="lazy">
+            <div class="project-card__overlay project-card__overlay--gallery">
+              <div class="project-card__gallery-hint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                  <rect x="2" y="2" width="20" height="20" rx="2" />
+                  <circle cx="8.5" cy="8.5" r="1.5" />
+                  <path d="M21 15l-5-5L5 21" />
+                </svg>
+                <span data-i18n="p.gallery">Смотреть скриншоты</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="tag tag--flutter">Flutter</span>
+              <span class="tag tag--django">Django</span>
+              <span class="tag tag--ai">AI</span>
+            </div>
+            <h4 class="project-card__title">Mashvara</h4>
+            <p class="project-card__desc" data-i18n="p.mashvara_app.desc">
+              Стартап-платформа для валидации бизнес-идей через реальную обратную связь. AI-генерация вопросов,
+              кластеризация ответов, нейтральная интерпретация данных. Антифрод-система, рейтинг респондентов,
+              результаты за 72 часа.
+            </p>
+            <div class="project-card__features">
+              <div class="feature-tag" data-i18n="p.mashvara_app.f1">🧠 AI-аналитика</div>
+              <div class="feature-tag" data-i18n="p.mashvara_app.f2">📊 Валидация идей</div>
+              <div class="feature-tag" data-i18n="p.mashvara_app.f3">🛡️ Антифрод</div>
+              <div class="feature-tag" data-i18n="p.mashvara_app.f4">⚡ 72 часа до результата</div>
+            </div>
+            <div class="project-card__footer">
+              <span class="project-card__type" data-i18n="p.mashvara_app.type">Стартап · AI-платформа</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ TECHNOLOGIES ═══════════ -->
+  <section class="tech" id="tech">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag" data-i18n="tech.tag">Стек</span>
+        <h2 class="section-title" data-i18n="tech.title">Технологии</h2>
+        <p class="section-desc" data-i18n="tech.desc">Современный стек для создания надёжных и масштабируемых продуктов
+        </p>
+      </div>
+      <div class="tech__grid reveal">
+        <div class="tech__item">
+          <div class="tech__icon">⚛️</div>
+          <span class="tech__name">Next.js / React</span>
+        </div>
+        <div class="tech__item">
+          <div class="tech__icon">🐍</div>
+          <span class="tech__name">Django / Python</span>
+        </div>
+        <div class="tech__item">
+          <div class="tech__icon">💙</div>
+          <span class="tech__name">Flutter / Dart</span>
+        </div>
+        <div class="tech__item">
+          <div class="tech__icon">🟨</div>
+          <span class="tech__name">JavaScript</span>
+        </div>
+        <div class="tech__item">
+          <div class="tech__icon">🌐</div>
+          <span class="tech__name">HTML / CSS</span>
+        </div>
+        <div class="tech__item">
+          <div class="tech__icon">🐘</div>
+          <span class="tech__name">PostgreSQL</span>
+        </div>
+        <div class="tech__item">
+          <div class="tech__icon">🔌</div>
+          <span class="tech__name">REST API</span>
+        </div>
+        <div class="tech__item">
+          <div class="tech__icon">🏢</div>
+          <span class="tech__name" data-i18n="tech.1c">1С Интеграция</span>
+        </div>
+        <div class="tech__item">
+          <div class="tech__icon">🤖</div>
+          <span class="tech__name">AI / LLM API</span>
+        </div>
+        <div class="tech__item">
+          <div class="tech__icon">▶️</div>
+          <span class="tech__name">Google Play</span>
+        </div>
+        <div class="tech__item">
+          <div class="tech__icon">🔍</div>
+          <span class="tech__name">SEO</span>
+        </div>
+        <div class="tech__item">
+          <div class="tech__icon">🐳</div>
+          <span class="tech__name">Docker</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ ADVANTAGES ═══════════ -->
+  <section class="advantages" id="advantages">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag" data-i18n="adv.tag">Почему мы</span>
+        <h2 class="section-title" data-i18n="adv.title">Преимущества</h2>
+      </div>
+      <div class="advantages__grid">
+        <div class="adv-card reveal">
+          <div class="adv-card__icon">🚀</div>
+          <h3 class="adv-card__title" data-i18n="adv.1.title">Полный цикл разработки</h3>
+          <p class="adv-card__desc" data-i18n="adv.1.desc">От идеи до продакшена — проектирование, разработка, деплой,
+            поддержка. Не нужно искать отдельных специалистов.</p>
+        </div>
+        <div class="adv-card reveal">
+          <div class="adv-card__icon">✅</div>
+          <h3 class="adv-card__title" data-i18n="adv.2.title">Реальные проекты в продакшене</h3>
+          <p class="adv-card__desc" data-i18n="adv.2.desc">Не макеты — работающие продукты с реальными пользователями,
+            загруженные в сторы и приносящие результат бизнесу.</p>
+        </div>
+        <div class="adv-card reveal">
+          <div class="adv-card__icon">⚡</div>
+          <h3 class="adv-card__title" data-i18n="adv.3.title">Любая сложность</h3>
+          <p class="adv-card__desc" data-i18n="adv.3.desc">Лендинг за неделю или CRM-система с мобильным приложением —
+            масштабируем решение под ваши задачи.</p>
+        </div>
+        <div class="adv-card reveal">
+          <div class="adv-card__icon">🔍</div>
+          <h3 class="adv-card__title" data-i18n="adv.4.title">SEO и перформанс</h3>
+          <p class="adv-card__desc" data-i18n="adv.4.desc">Оптимизация под поисковые системы, быстрая загрузка, SSR —
+            ваш сайт будет находиться наверху выдачи.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CONTACT ═══════════ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag" data-i18n="contact.tag">Контакт</span>
+        <h2 class="section-title" data-i18n="contact.title">Давайте обсудим ваш проект</h2>
+        <p class="section-desc" data-i18n="contact.desc">Расскажите о своей идее — мы предложим оптимальное решение</p>
+      </div>
+      <div class="contact__wrapper reveal">
+        <div class="contact__info">
+          <h3 class="contact__info-title" data-i18n="contact.info_title">Контактная информация</h3>
+          <div class="contact__channels">
+            <a href="mailto:info@equus.dev" class="contact__channel">
+              <div class="contact__channel-icon">✉️</div>
+              <div>
+                <span class="contact__channel-label">Email</span>
+                <span class="contact__channel-value">info@equus.dev</span>
+              </div>
+            </a>
+            <a href="tel:+996000000000" class="contact__channel">
+              <div class="contact__channel-icon">📞</div>
+              <div>
+                <span class="contact__channel-label" data-i18n="contact.phone">Телефон</span>
+                <span class="contact__channel-value">+996 (000) 000-000</span>
+              </div>
+            </a>
+            <a href="https://t.me/equus_dev" target="_blank" rel="noopener" class="contact__channel">
+              <div class="contact__channel-icon">✈️</div>
+              <div>
+                <span class="contact__channel-label">Telegram</span>
+                <span class="contact__channel-value">@equus_dev</span>
+              </div>
+            </a>
+            <a href="https://wa.me/996000000000" target="_blank" rel="noopener" class="contact__channel">
+              <div class="contact__channel-icon">💬</div>
+              <div>
+                <span class="contact__channel-label">WhatsApp</span>
+                <span class="contact__channel-value">+996 (000) 000-000</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <form class="contact__form" id="contactForm" action="https://formsubmit.co/lepri4dw@gmail.com" method="POST">
+          <!-- FormSubmit config -->
+          <input type="hidden" name="_subject" value="Новая заявка с портфолио Equus">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" style="display:none">
+
+          <div class="form-group">
+            <label for="name" data-i18n="form.name">Имя</label>
+            <input type="text" id="name" name="name" required placeholder="Ваше имя"
+              data-i18n-placeholder="form.name_ph">
+          </div>
+          <div class="form-group">
+            <label for="email" data-i18n="form.email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="your@email.com">
+          </div>
+          <div class="form-group">
+            <label for="message" data-i18n="form.message">Сообщение</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Расскажите о вашем проекте..."
+              data-i18n-placeholder="form.message_ph"></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full" data-i18n="form.submit">Отправить сообщение</button>
+          <p class="contact__form-note" data-i18n="form.note">Или напишите напрямую в Telegram / WhatsApp — ответим в
+            течение часа</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__logo">
+        <img src="images/equus logo.jpg" alt="Equus Logo" class="nav__logo-icon">
+        <span>Equus</span>
+      </div>
+      <p class="footer__copy">© 2025 Equus. <span data-i18n="footer.rights">Все права защищены.</span></p>
+    </div>
+  </footer>
+
+  <!-- ═══════════ GALLERY MODAL ═══════════ -->
+  <div class="modal" id="galleryModal">
+    <div class="modal__backdrop" id="modalBackdrop"></div>
+    <div class="modal__content">
+      <button class="modal__close" id="modalClose" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+          <path d="M18 6L6 18M6 6l12 12" />
+        </svg>
+      </button>
+      <h3 class="modal__title" id="modalTitle"></h3>
+      <div class="modal__carousel">
+        <button class="modal__arrow modal__arrow--prev" id="modalPrev" aria-label="Previous">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
+        <div class="modal__slides" id="modalSlides"></div>
+        <button class="modal__arrow modal__arrow--next" id="modalNext" aria-label="Next">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </button>
+      </div>
+      <div class="modal__dots" id="modalDots"></div>
+      <div class="modal__counter" id="modalCounter"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
