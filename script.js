@@ -14,22 +14,26 @@ const translations = {
     'hero.title1': 'Создаём цифровые',
     'hero.title2': 'продукты',
     'hero.title3': ' которые работают',
-    'hero.subtitle': 'Полный цикл разработки: от лендингов и корпоративных сайтов до CRM-систем и мобильных приложений. Продакшен-проекты с реальными пользователями.',
+    'hero.subtitle': 'Полный цикл разработки: от лендингов и корпоративных сайтов до CRM-систем и мобильных приложений. Проектируем, запускаем и развиваем цифровые продукты под задачи бизнеса.',
     'hero.cta1': 'Смотреть проекты',
     'hero.cta2': 'Связаться',
 
     'stats.projects': 'Проектов завершено',
     'stats.mobile': 'Мобильных приложений',
-    'stats.production': 'Проекта в продакшене',
+    'stats.production': 'Комплексных решений',
     'stats.startups': 'Стартапа на запуске',
 
     'projects.tag': 'Портфолио',
     'projects.title': 'Проекты',
-    'projects.desc': 'Реальные проекты — от лендингов до сложных CRM-платформ с мобильными приложениями',
+    'projects.desc': 'От лендингов до сложных CRM-платформ с мобильными приложениями',
     'projects.all': 'Все',
+    'projects.complex': 'Комплексные',
     'projects.landings': 'Лендинги',
     'projects.platforms': 'Платформы',
     'projects.mobileApps': 'Мобильные',
+
+    'cat0.title': 'Комплексные решения',
+    'cat0.desc': 'Единые digital-продукты, где сайт, мобильное приложение и бизнес-логика работают как одна система',
 
     'cat1.title': 'Лендинги и сайты-визитки',
     'cat1.desc': 'Быстрые, современные, адаптивные сайты для бизнеса — конверсия и первое впечатление',
@@ -38,20 +42,42 @@ const translations = {
     'cat3.title': 'Мобильные приложения',
     'cat3.desc': 'Кроссплатформенные приложения на Flutter с серверной частью на Django',
 
-    'p.erai.desc': 'Корпоративный сайт-визитка для фармацевтической компании. Современный дизайн, адаптивная вёрстка, высокая скорость загрузки. Server-side rendering для SEO.',
+    'p.erai.desc': 'Корпоративный сайт для фармацевтической компании с акцентом на доверие к бренду, удобную навигацию и рост обращений.',
     'p.erai.type': 'Корпоративный сайт',
-    'p.zealon_land.desc': 'Промо-лендинг для мобильного приложения ZealOn — платформы быстрого найма. Анимации, продающая структура, мобильная адаптация.',
+    'p.zealon_land.desc': 'Промо-лендинг ZealOn с фокусом на конверсию в установки и заявки. Понятный оффер и сильный первый экран.',
     'p.zealon_land.type': 'Промо-лендинг',
-    'p.mashvara_land.desc': 'Промо-лендинг для AI-платформы Mashvara — сервиса валидации бизнес-идей. Чистый дизайн, продуманная структура для конверсии.',
+    'p.mashvara_land.desc': 'Промо-лендинг Mashvara с акцентом на ценность сервиса и быстрый путь от интереса к действию.',
     'p.mashvara_land.type': 'Промо-лендинг',
     'p.maxmetall.desc': 'Лендинг для металлургической компании с фокусом на SEO-оптимизацию. Сайт выведен в топ поисковой выдачи в своей нише. Дизайн логотипа включён в проект.',
     'p.maxmetall.type': 'Лендинг · SEO',
     'p.maxmetall.seo': '🔍 ТОП выдачи в нише',
+    'p.electrolab.desc': 'Корпоративный сайт консалтинговой компании ELECTROLAB. Упаковали услуги по стратегическому консалтингу, автоматизации и бизнес-планированию в понятную структуру с акцентом на доверие, экспертизу и генерацию заявок.',
+    'p.electrolab.type': 'Корпоративный сайт · Консалтинг',
     'p.visit': 'Посмотреть →',
 
-    'p.live': '🟢 В продакшене',
-    'p.pharmznanie.desc': 'Полноценная CRM-платформа для образовательного портала в фармацевтической отрасли. Включает систему обучения с уроками и курсами, подробную админ-панель, генерацию приказов и удостоверений, программу лояльности, многоролевую систему (куратор, производитель, администратор). Проект в продакшене 2+ месяцев с реальными пользователями. Полная миграция контента и пользователей со старой платформы.',
+    'p.live': '🟢 Ключевой кейс',
+    'p.zealon_suite.desc': 'Комплексный продукт для быстрого найма: промо-сайт + мобильное приложение в единой экосистеме. Единый пользовательский путь для кандидатов и работодателей, удобный запуск и масштабирование.',
+    'p.zealon_suite.type': 'Комплексное решение · Веб + Мобайл',
+    'p.zealon_suite.f1': '🌐 Лендинг + бренд-коммуникация',
+    'p.zealon_suite.f2': '📱 Flutter-приложение',
+    'p.zealon_suite.f3': '👆 Свайп-найм + видео-питч',
+    'p.zealon_suite.f4': '🤖 AI и геолокация',
+    'p.erai_suite.desc': 'Комплексное решение для фарм-сети: сайт, мобильное приложение и бизнес-автоматизация. Клиенты получают удобный сервис, а компания - прозрачные процессы и рост повторных продаж.',
+    'p.erai_suite.type': 'Комплексное решение · Веб + Мобайл',
+    'p.erai_suite.f1': '💳 Программа лояльности',
+    'p.erai_suite.f2': '🗺️ Карта аптек и прайс-чекер',
+    'p.erai_suite.f3': '🛒 Онлайн-заказы',
+    'p.erai_suite.f4': '🔗 Интеграция с 1С',
+    'p.mashvara_suite.desc': 'Платформа валидации бизнес-идей как единый продукт: промо-лендинг, мобильное приложение и удобный процесс проверки гипотез. Фокус на понятные выводы и быстрый цикл обратной связи.',
+    'p.mashvara_suite.type': 'Комплексное решение · Веб + Мобайл',
+    'p.mashvara_suite.f1': '🧠 Проверка бизнес-гипотез',
+    'p.mashvara_suite.f2': '📊 Понятная аналитика ответов',
+    'p.mashvara_suite.f3': '🛡️ Контроль качества данных',
+    'p.mashvara_suite.f4': '⚡ Быстрый цикл результатов',
+    'p.pharmznanie.desc': 'Полноценная CRM-платформа для образовательного портала в фармацевтической отрасли. Включает систему обучения с уроками и курсами, подробную админ-панель, генерацию приказов и удостоверений, программу лояльности, многоролевую систему (куратор, производитель, администратор). Выполнена полная миграция контента и пользователей со старой платформы.',
     'p.pharmznanie.type': 'CRM · Веб + Мобайл',
+    'p.pharmznanie_list.desc': 'CRM-платформа для образовательного фарм-портала с курсами, админ-панелью, генерацией документов, программой лояльности и мобильным приложением. Сильный b2b-инструмент для обучения и управления программами.',
+    'p.pharmznanie_list.type': 'CRM-платформа · Веб + Мобайл',
     'p.pharmznanie.f1': '📚 Система обучения',
     'p.pharmznanie.f2': '👥 Мультиролевая система',
     'p.pharmznanie.f3': '📄 Генерация документов',
@@ -88,14 +114,14 @@ const translations = {
 
     'adv.tag': 'Почему мы',
     'adv.title': 'Преимущества',
-    'adv.1.title': 'Полный цикл разработки',
-    'adv.1.desc': 'От идеи до продакшена — проектирование, разработка, деплой, поддержка. Не нужно искать отдельных специалистов.',
-    'adv.2.title': 'Реальные проекты в продакшене',
-    'adv.2.desc': 'Не макеты — работающие продукты с реальными пользователями, загруженные в сторы и приносящие результат бизнесу.',
-    'adv.3.title': 'Любая сложность',
-    'adv.3.desc': 'Лендинг за неделю или CRM-система с мобильным приложением — масштабируем решение под ваши задачи.',
-    'adv.4.title': 'SEO и перформанс',
-    'adv.4.desc': 'Оптимизация под поисковые системы, быстрая загрузка, SSR — ваш сайт будет находиться наверху выдачи.',
+    'adv.1.title': 'Индивидуальные консультации по программам лояльности',
+    'adv.1.desc': 'Проектируем и адаптируем программы лояльности под ваши цели: удержание клиентов, рост повторных продаж и повышение LTV.',
+    'adv.2.title': 'Автоматизация бухгалтерского и финансового учета',
+    'adv.2.desc': 'Внедряем цифровые процессы учета и отчетности, чтобы сократить ручную работу, минимизировать ошибки и ускорить принятие решений.',
+    'adv.3.title': 'Аудит и разработка сайтов',
+    'adv.3.desc': 'Проводим технический и маркетинговый аудит, усиливаем текущие сайты или создаем новые с фокусом на конверсию и рост.',
+    'adv.4.title': 'Разработка интернет-магазинов и маркетплейсов',
+    'adv.4.desc': 'Запускаем e-commerce решения любой сложности: от каталога и корзины до интеграций, аналитики и масштабируемой архитектуры.',
 
     'contact.tag': 'Контакт',
     'contact.title': 'Давайте обсудим ваш проект',
@@ -122,22 +148,26 @@ const translations = {
     'hero.title1': 'We build digital',
     'hero.title2': 'products',
     'hero.title3': ' that work',
-    'hero.subtitle': 'Full-cycle development: from landing pages and corporate websites to CRM systems and mobile applications. Production projects with real users.',
+    'hero.subtitle': 'Full-cycle development: from landing pages and corporate websites to CRM systems and mobile applications. We design, launch, and grow digital products tailored to business goals.',
     'hero.cta1': 'View Projects',
     'hero.cta2': 'Get in Touch',
 
     'stats.projects': 'Projects Delivered',
     'stats.mobile': 'Mobile Applications',
-    'stats.production': 'Projects in Production',
+    'stats.production': 'Integrated Solutions',
     'stats.startups': 'Startups Launching',
 
     'projects.tag': 'Portfolio',
     'projects.title': 'Projects',
-    'projects.desc': 'Real projects — from landing pages to complex CRM platforms with mobile applications',
+    'projects.desc': 'From landing pages to complex CRM platforms with mobile applications',
     'projects.all': 'All',
+    'projects.complex': 'Integrated',
     'projects.landings': 'Landings',
     'projects.platforms': 'Platforms',
     'projects.mobileApps': 'Mobile',
+
+    'cat0.title': 'Integrated Solutions',
+    'cat0.desc': 'Unified digital products where website, mobile app, and business logic work as one system',
 
     'cat1.title': 'Landing Pages & Business Sites',
     'cat1.desc': 'Fast, modern, responsive websites for business — conversion and first impression',
@@ -146,20 +176,42 @@ const translations = {
     'cat3.title': 'Mobile Applications',
     'cat3.desc': 'Cross-platform Flutter applications with Django backend',
 
-    'p.erai.desc': 'Corporate website for a pharmaceutical company. Modern design, responsive layout, fast loading. Server-side rendering for SEO optimization.',
+    'p.erai.desc': 'Corporate website for a pharmaceutical company focused on trust, clear navigation, and stronger lead generation.',
     'p.erai.type': 'Corporate Website',
-    'p.zealon_land.desc': 'Promo landing page for ZealOn mobile app — a fast hiring platform. Animations, sales-oriented structure, mobile-first.',
+    'p.zealon_land.desc': 'ZealOn promo landing page focused on installs and lead conversion with a clear value proposition and strong hero section.',
     'p.zealon_land.type': 'Promo Landing',
-    'p.mashvara_land.desc': 'Promo landing page for Mashvara AI platform — a business idea validation service. Clean design, conversion-focused structure.',
+    'p.mashvara_land.desc': 'Mashvara promo landing page focused on service value and a fast path from interest to action.',
     'p.mashvara_land.type': 'Promo Landing',
     'p.maxmetall.desc': 'Landing page for a metallurgical company with SEO-first approach. Website ranked among top search results in its niche. Logo design included.',
     'p.maxmetall.type': 'Landing · SEO',
     'p.maxmetall.seo': '🔍 TOP search results in niche',
+    'p.electrolab.desc': 'Corporate website for ELECTROLAB consulting company. Structured strategic consulting, automation, and business planning services into a clear conversion-driven flow focused on trust and expertise.',
+    'p.electrolab.type': 'Corporate Website · Consulting',
     'p.visit': 'View →',
 
-    'p.live': '🟢 In Production',
-    'p.pharmznanie.desc': 'Full-featured CRM platform for an educational portal in the pharmaceutical industry. Includes learning management system with courses and lessons, detailed admin panel, document generation (orders, certificates), loyalty program, multi-role system (curator, manufacturer, admin). Flutter mobile app published on Google Play. In production 2+ months with real users. Full content and user migration from legacy platform.',
+    'p.live': '🟢 Featured Case',
+    'p.zealon_suite.desc': 'A unified fast-hiring product: promo website and mobile app in one ecosystem. One clear user journey for candidates and employers with launch-ready scaling potential.',
+    'p.zealon_suite.type': 'Integrated Solution · Web + Mobile',
+    'p.zealon_suite.f1': '🌐 Landing + brand communication',
+    'p.zealon_suite.f2': '📱 Flutter mobile app',
+    'p.zealon_suite.f3': '👆 Swipe hiring + video pitch',
+    'p.zealon_suite.f4': '🤖 AI tools + geolocation',
+    'p.erai_suite.desc': 'Integrated solution for a pharma network: website, mobile app, and business automation. Better customer service for users and clearer sales and retention processes for the team.',
+    'p.erai_suite.type': 'Integrated Solution · Web + Mobile',
+    'p.erai_suite.f1': '💳 Loyalty program',
+    'p.erai_suite.f2': '🗺️ Pharmacy map & price checker',
+    'p.erai_suite.f3': '🛒 Online orders',
+    'p.erai_suite.f4': '🔗 1C integration',
+    'p.mashvara_suite.desc': 'Business idea validation platform as one product: promo landing page, mobile app, and a simple hypothesis-testing flow. Focused on clear insights and fast feedback cycles.',
+    'p.mashvara_suite.type': 'Integrated Solution · Web + Mobile',
+    'p.mashvara_suite.f1': '🧠 Business hypothesis validation',
+    'p.mashvara_suite.f2': '📊 Clear response analytics',
+    'p.mashvara_suite.f3': '🛡️ Data quality control',
+    'p.mashvara_suite.f4': '⚡ Fast feedback cycles',
+    'p.pharmznanie.desc': 'Full-featured CRM platform for an educational portal in the pharmaceutical industry. Includes learning management system with courses and lessons, detailed admin panel, document generation (orders, certificates), loyalty program, multi-role system (curator, manufacturer, admin). Flutter mobile app published on Google Play. Full content and user migration from legacy platform.',
     'p.pharmznanie.type': 'CRM · Web + Mobile',
+    'p.pharmznanie_list.desc': 'CRM platform for a pharmaceutical education portal with courses, admin panel, document generation, loyalty program, and mobile application. A solid B2B tool for education workflows and program management.',
+    'p.pharmznanie_list.type': 'CRM Platform · Web + Mobile',
     'p.pharmznanie.f1': '📚 Learning System',
     'p.pharmznanie.f2': '👥 Multi-role System',
     'p.pharmznanie.f3': '📄 Document Generation',
@@ -196,14 +248,14 @@ const translations = {
 
     'adv.tag': 'Why Us',
     'adv.title': 'Advantages',
-    'adv.1.title': 'Full-Cycle Development',
-    'adv.1.desc': 'From idea to production — design, development, deployment, support. No need to hire separate specialists.',
-    'adv.2.title': 'Real Production Projects',
-    'adv.2.desc': 'Not mockups — working products with real users, published to app stores and delivering business results.',
-    'adv.3.title': 'Any Complexity',
-    'adv.3.desc': 'A landing page in a week or a CRM system with mobile app — we scale the solution to your needs.',
-    'adv.4.title': 'SEO & Performance',
-    'adv.4.desc': 'Search engine optimization, fast loading, SSR — your website will rank at the top.',
+    'adv.1.title': 'Tailored Loyalty Program Consulting',
+    'adv.1.desc': 'We design and adapt loyalty programs to your business goals: stronger retention, higher repeat sales, and better LTV.',
+    'adv.2.title': 'Accounting and Financial Automation',
+    'adv.2.desc': 'We digitalize accounting and finance workflows to reduce manual work, minimize errors, and speed up decision-making.',
+    'adv.3.title': 'Website Audit and Development',
+    'adv.3.desc': 'We run technical and marketing audits, improve existing websites, or build new ones focused on conversion and growth.',
+    'adv.4.title': 'E-commerce and Marketplace Development',
+    'adv.4.desc': 'We deliver scalable online stores and marketplaces, from catalog and checkout to integrations, analytics, and growth-ready architecture.',
 
     'contact.tag': 'Contact',
     'contact.title': "Let's Discuss Your Project",
@@ -233,8 +285,8 @@ function setLanguage(lang) {
 
   // Title
   document.title = lang === 'ru'
-    ? 'Equus — Full-Stack Разработка'
-    : 'Equus — Full-Stack Development';
+    ? 'EQUUS — Full-Stack Разработка'
+    : 'EQUUS — Full-Stack Development';
 
   // Apply translations
   document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -378,6 +430,7 @@ function initFilters() {
   const categories = document.querySelectorAll('.projects__category');
 
   const categoryMap = {
+    'complex': 'cat-complex',
     'landing': 'cat-landings',
     'platform': 'cat-platforms',
     'mobile': 'cat-mobile',
@@ -445,9 +498,9 @@ function initContactForm() {
       const name = form.querySelector('#name').value;
       const email = form.querySelector('#email').value;
       const message = form.querySelector('#message').value;
-      const subject = encodeURIComponent('Новая заявка с портфолио Equus');
+      const subject = encodeURIComponent('Новая заявка с портфолио EQUUS');
       const body = encodeURIComponent(`Имя: ${name}\nEmail: ${email}\n\nСообщение:\n${message}`);
-      window.location.href = `mailto:info@equus.dev?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:equus@electrolab.kg?subject=${subject}&body=${body}`;
     }
   });
 }

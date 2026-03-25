@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Equus — Full-Stack Разработка</title>
+  <title>EQUUS — Full-Stack Разработка</title>
   <link rel="icon" type="image/jpeg" href="images/equus logo.jpg">
   <meta name="description"
-    content="Equus — разработка веб- и мобильных приложений любой сложности. Лендинги, CRM-системы, мобильные приложения на Flutter, Next.js, Django.">
+    content="EQUUS — разработка веб- и мобильных приложений любой сложности. Лендинги, CRM-системы, мобильные приложения на Flutter, Next.js, Django.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
@@ -21,8 +21,8 @@
   <nav class="nav" id="nav">
     <div class="nav__container">
       <a href="#hero" class="nav__logo">
-        <img src="images/equus logo.jpg" alt="Equus Logo" class="nav__logo-icon">
-        <span class="nav__logo-text">Equus</span>
+        <img src="images/equus logo.jpg" alt="EQUUS Logo" class="nav__logo-icon">
+        <span class="nav__logo-text">EQUUS</span>
       </a>
       <ul class="nav__links" id="navLinks">
         <li><a href="#projects" class="nav__link" data-i18n="nav.projects">Проекты</a></li>
@@ -66,7 +66,7 @@
       </h1>
       <p class="hero__subtitle reveal" data-i18n="hero.subtitle">
         Полный цикл разработки: от лендингов и корпоративных сайтов до CRM-систем и мобильных приложений.
-        Продакшен-проекты с реальными пользователями.
+        Проектируем, запускаем и развиваем цифровые продукты под задачи бизнеса.
       </p>
       <div class="hero__cta reveal">
         <a href="#projects" class="btn btn--primary" data-i18n="hero.cta1">Смотреть проекты</a>
@@ -91,7 +91,7 @@
       </div>
       <div class="stats__item reveal">
         <span class="stats__number" data-count="2">0</span>
-        <span class="stats__label" data-i18n="stats.production">Проекта в продакшене</span>
+        <span class="stats__label" data-i18n="stats.production">Комплексных решений</span>
       </div>
       <div class="stats__item reveal">
         <span class="stats__number" data-count="3">0</span>
@@ -106,16 +106,158 @@
       <div class="section-header reveal">
         <span class="section-tag" data-i18n="projects.tag">Портфолио</span>
         <h2 class="section-title" data-i18n="projects.title">Проекты</h2>
-        <p class="section-desc" data-i18n="projects.desc">Реальные проекты — от лендингов до сложных CRM-платформ с
+        <p class="section-desc" data-i18n="projects.desc">От лендингов до сложных CRM-платформ с
           мобильными приложениями</p>
       </div>
 
       <!-- Filter Tabs -->
       <div class="projects__filters reveal">
         <button class="projects__filter active" data-filter="all" data-i18n="projects.all">Все</button>
+        <button class="projects__filter" data-filter="complex" data-i18n="projects.complex">Комплексные</button>
         <button class="projects__filter" data-filter="landing" data-i18n="projects.landings">Лендинги</button>
         <button class="projects__filter" data-filter="platform" data-i18n="projects.platforms">Платформы</button>
         <button class="projects__filter" data-filter="mobile" data-i18n="projects.mobileApps">Мобильные</button>
+      </div>
+
+      <!-- ── Category 0: Complex Solutions ── -->
+      <div class="projects__category reveal" id="cat-complex">
+        <div class="category-header">
+          <div class="category-header__icon">🧩</div>
+          <div>
+            <h3 class="category-header__title" data-i18n="cat0.title">Комплексные решения</h3>
+            <p class="category-header__desc" data-i18n="cat0.desc">Единые digital-продукты, где сайт, мобильное
+              приложение и бизнес-логика работают как одна система</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="projects__grid">
+        <!-- ZealOn -->
+        <article class="project-card reveal" data-category="complex"
+          data-gallery='["images/zealon-landing.png","images/zealon/main-screen.jpg","images/zealon/feed_candidate.jpg","images/zealon/feed_jobs.jpg","images/zealon/profile.png"]'
+          data-gallery-title="ZealOn">
+          <div class="project-card__image project-card__image--clickable">
+            <img src="images/zealon-landing.png" alt="ZealOn" loading="lazy">
+            <div class="project-card__overlay project-card__overlay--gallery">
+              <div class="project-card__gallery-hint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                  <rect x="2" y="2" width="20" height="20" rx="2" />
+                  <circle cx="8.5" cy="8.5" r="1.5" />
+                  <path d="M21 15l-5-5L5 21" />
+                </svg>
+                <span data-i18n="p.gallery">Смотреть скриншоты</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="tag tag--react">React</span>
+              <span class="tag tag--django">Django</span>
+              <span class="tag tag--flutter">Flutter</span>
+              <span class="tag tag--ai">AI</span>
+              <span class="tag tag--python">Python</span>
+            </div>
+            <h4 class="project-card__title">ZealOn</h4>
+            <p class="project-card__desc" data-i18n="p.zealon_suite.desc">Комплексный продукт для быстрого найма:
+              промо-сайт + мобильное приложение в единой экосистеме. Единый пользовательский путь для кандидатов и
+              работодателей, удобный запуск и масштабирование продукта.</p>
+            <div class="project-card__features">
+              <div class="feature-tag" data-i18n="p.zealon_suite.f1">🌐 Лендинг + бренд-коммуникация</div>
+              <div class="feature-tag" data-i18n="p.zealon_suite.f2">📱 Flutter-приложение</div>
+              <div class="feature-tag" data-i18n="p.zealon_suite.f3">👆 Свайп-найм + видео-питч</div>
+              <div class="feature-tag" data-i18n="p.zealon_suite.f4">🤖 AI и геолокация</div>
+            </div>
+            <div class="project-card__footer">
+              <span class="project-card__type" data-i18n="p.zealon_suite.type">Комплексное решение · Веб + Мобайл</span>
+              <a href="https://www.zealon.ai/" target="_blank" rel="noopener" class="project-card__visit"
+                data-i18n="p.visit">Посмотреть →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Erai-Pharm -->
+        <article class="project-card reveal" data-category="complex"
+          data-gallery='["images/erai-pharm-site.png","images/erai-pharm/main.jpg","images/erai-pharm/photo_1_2026-03-24_22-46-19.jpg","images/erai-pharm/photo_2_2026-03-24_22-46-19.jpg"]'
+          data-gallery-title="Erai-Pharm">
+          <div class="project-card__image project-card__image--clickable">
+            <img src="images/erai-pharm-site.png" alt="Erai-Pharm" loading="lazy">
+            <div class="project-card__overlay project-card__overlay--gallery">
+              <div class="project-card__gallery-hint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                  <rect x="2" y="2" width="20" height="20" rx="2" />
+                  <circle cx="8.5" cy="8.5" r="1.5" />
+                  <path d="M21 15l-5-5L5 21" />
+                </svg>
+                <span data-i18n="p.gallery">Смотреть скриншоты</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="tag tag--next">Next.js</span>
+              <span class="tag tag--django">Django</span>
+              <span class="tag tag--flutter">Flutter</span>
+              <span class="tag tag--1c">1С</span>
+            </div>
+            <h4 class="project-card__title">Erai-Pharm</h4>
+            <p class="project-card__desc" data-i18n="p.erai_suite.desc">Комплексное решение для фарм-сети: сайт,
+              мобильное приложение и бизнес-автоматизация. Клиенты получают удобный сервис, а компания - прозрачные
+              процессы и рост повторных продаж.</p>
+            <div class="project-card__features">
+              <div class="feature-tag" data-i18n="p.erai_suite.f1">💳 Программа лояльности</div>
+              <div class="feature-tag" data-i18n="p.erai_suite.f2">🗺️ Карта аптек и прайс-чекер</div>
+              <div class="feature-tag" data-i18n="p.erai_suite.f3">🛒 Онлайн-заказы</div>
+              <div class="feature-tag" data-i18n="p.erai_suite.f4">🔗 Интеграция с 1С</div>
+            </div>
+            <div class="project-card__footer">
+              <span class="project-card__type" data-i18n="p.erai_suite.type">Комплексное решение · Веб + Мобайл</span>
+              <a href="https://www.erai.kg/" target="_blank" rel="noopener" class="project-card__visit"
+                data-i18n="p.visit">Посмотреть →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Mashvara -->
+        <article class="project-card reveal" data-category="complex"
+          data-gallery='["images/mashvara-landing.png","images/mashvara/main.jpg","images/mashvara/photo_2026-03-24_17-42-17.jpg","images/mashvara/photo_2026-03-24_17-42-23.jpg"]'
+          data-gallery-title="Mashvara">
+          <div class="project-card__image project-card__image--clickable">
+            <img src="images/mashvara-landing.png" alt="Mashvara" loading="lazy">
+            <div class="project-card__overlay project-card__overlay--gallery">
+              <div class="project-card__gallery-hint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                  <rect x="2" y="2" width="20" height="20" rx="2" />
+                  <circle cx="8.5" cy="8.5" r="1.5" />
+                  <path d="M21 15l-5-5L5 21" />
+                </svg>
+                <span data-i18n="p.gallery">Смотреть скриншоты</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="tag tag--html">HTML</span>
+              <span class="tag tag--django">Django</span>
+              <span class="tag tag--flutter">Flutter</span>
+              <span class="tag tag--ai">AI</span>
+            </div>
+            <h4 class="project-card__title">Mashvara</h4>
+            <p class="project-card__desc" data-i18n="p.mashvara_suite.desc">Платформа валидации бизнес-идей как
+              единый продукт: промо-лендинг, мобильное приложение и удобный рабочий процесс для проверки гипотез.
+              Фокус на понятные выводы и быстрый цикл получения обратной связи.</p>
+            <div class="project-card__features">
+              <div class="feature-tag" data-i18n="p.mashvara_suite.f1">🧠 Проверка бизнес-гипотез</div>
+              <div class="feature-tag" data-i18n="p.mashvara_suite.f2">📊 Понятная аналитика ответов</div>
+              <div class="feature-tag" data-i18n="p.mashvara_suite.f3">🛡️ Контроль качества данных</div>
+              <div class="feature-tag" data-i18n="p.mashvara_suite.f4">⚡ Быстрый цикл результатов</div>
+            </div>
+            <div class="project-card__footer">
+              <span class="project-card__type" data-i18n="p.mashvara_suite.type">Комплексное решение · Веб + Мобайл</span>
+              <a href="https://mashvara.ai/" target="_blank" rel="noopener" class="project-card__visit"
+                data-i18n="p.visit">Посмотреть →</a>
+            </div>
+          </div>
+        </article>
       </div>
 
       <!-- ── Category 1: Landings ── -->
@@ -179,9 +321,9 @@
               <span class="tag tag--css">CSS</span>
               <span class="tag tag--js">JavaScript</span>
             </div>
-            <h4 class="project-card__title">ZealOn</h4>
-            <p class="project-card__desc" data-i18n="p.zealon_land.desc">Промо-лендинг для мобильного приложения ZealOn
-              — платформы быстрого найма. Анимации, продающая структура, мобильная адаптация.</p>
+            <h4 class="project-card__title">ZealOn Landing</h4>
+            <p class="project-card__desc" data-i18n="p.zealon_land.desc">Промо-лендинг для мобильного приложения
+              ZealOn — платформы быстрого найма. Анимации, продающая структура, мобильная адаптация.</p>
             <div class="project-card__footer">
               <span class="project-card__type" data-i18n="p.zealon_land.type">Промо-лендинг</span>
               <a href="https://www.zealon.ai/" target="_blank" rel="noopener" class="project-card__visit"
@@ -251,6 +393,37 @@
           <div class="project-card__badge-seo" data-i18n="p.maxmetall.seo">🔍 ТОП выдачи в нише</div>
         </article>
 
+        <!-- Electrolab Landing -->
+        <article class="project-card reveal" data-category="landing">
+          <div class="project-card__image">
+            <img src="images/electrolab.png" alt="Electrolab" loading="lazy">
+            <div class="project-card__overlay">
+              <a href="https://electrolab.kg/" target="_blank" rel="noopener" class="project-card__link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="tag tag--html">HTML</span>
+              <span class="tag tag--css">CSS</span>
+              <span class="tag tag--js">JavaScript</span>
+              <span class="tag tag--seo">Consulting</span>
+            </div>
+            <h4 class="project-card__title">ELECTROLAB</h4>
+            <p class="project-card__desc" data-i18n="p.electrolab.desc">Корпоративный сайт консалтинговой компании
+              ELECTROLAB. Упаковали услуги по стратегическому консалтингу, автоматизации и бизнес-планированию в
+              понятную структуру с акцентом на доверие, экспертизу и генерацию заявок.</p>
+            <div class="project-card__footer">
+              <span class="project-card__type" data-i18n="p.electrolab.type">Корпоративный сайт · Консалтинг</span>
+              <a href="https://electrolab.kg/" target="_blank" rel="noopener" class="project-card__visit"
+                data-i18n="p.visit">Посмотреть →</a>
+            </div>
+          </div>
+        </article>
+
         <!-- ── Category 2: Web Platforms ── -->
       </div>
 
@@ -265,16 +438,16 @@
         </div>
       </div>
 
-      <div class="projects__grid projects__grid--featured">
+      <div class="projects__grid">
         <!-- PharmZnanie -->
-        <article class="project-card project-card--featured reveal" data-category="platform"
+        <article class="project-card reveal" data-category="platform"
           data-gallery='["images/pharmznanie-site.png","images/pharmznanie/pharmznanie-site-2.png","images/pharmznanie/pharmznanie-site-3.png","images/pharmznanie/pharmznanie-site-4.png","images/pharmznanie/pharmznanie-site-5.png","images/pharmznanie/photo_1_2026-03-24_17-43-32.jpg","images/pharmznanie/photo_2_2026-03-24_17-43-32.jpg","images/pharmznanie/photo_3_2026-03-24_17-43-32.jpg","images/pharmznanie/photo_4_2026-03-24_17-43-32.jpg","images/pharmznanie/photo_5_2026-03-24_17-43-32.jpg"]'
           data-gallery-title="PharmZnanie CRM">
-          <div class="project-card__image project-card__image--wide project-card__image--clickable">
+          <div class="project-card__image project-card__image--clickable">
             <img src="images/pharmznanie-site.png" alt="PharmZnanie" loading="lazy">
             <div class="project-card__overlay project-card__overlay--gallery">
               <div class="project-card__gallery-hint">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
                   <rect x="2" y="2" width="20" height="20" rx="2" />
                   <circle cx="8.5" cy="8.5" r="1.5" />
                   <path d="M21 15l-5-5L5 21" />
@@ -282,33 +455,20 @@
                 <span data-i18n="p.gallery">Смотреть скриншоты</span>
               </div>
             </div>
-            <div class="project-card__live-badge" data-i18n="p.live">🟢 В продакшене</div>
           </div>
           <div class="project-card__body">
             <div class="project-card__tags">
               <span class="tag tag--next">Next.js</span>
               <span class="tag tag--django">Django</span>
               <span class="tag tag--flutter">Flutter</span>
-              <span class="tag tag--python">Python</span>
               <span class="tag tag--postgres">PostgreSQL</span>
             </div>
             <h4 class="project-card__title">PharmZnanie CRM</h4>
-            <p class="project-card__desc" data-i18n="p.pharmznanie.desc">
-              Полноценная CRM-платформа для образовательного портала в фармацевтической отрасли. Включает систему
-              обучения с уроками и курсами, подробную админ-панель, генерацию приказов и удостоверений, программу
-              лояльности, многоролевую систему (куратор, производитель, администратор). Проект в продакшене 2+ месяцев с
-              реальными пользователями. Полная миграция контента и пользователей со старой платформы.
-            </p>
-            <div class="project-card__features">
-              <div class="feature-tag" data-i18n="p.pharmznanie.f1">📚 Система обучения</div>
-              <div class="feature-tag" data-i18n="p.pharmznanie.f2">👥 Мультиролевая система</div>
-              <div class="feature-tag" data-i18n="p.pharmznanie.f3">📄 Генерация документов</div>
-              <div class="feature-tag" data-i18n="p.pharmznanie.f4">🎁 Программа лояльности</div>
-              <div class="feature-tag" data-i18n="p.pharmznanie.f5">📱 Google Play</div>
-              <div class="feature-tag" data-i18n="p.pharmznanie.f6">🔄 Миграция данных</div>
-            </div>
+            <p class="project-card__desc" data-i18n="p.pharmznanie_list.desc">CRM-платформа для образовательного
+              фарм-портала с курсами, админ-панелью, генерацией документов, программой лояльности и мобильным
+              приложением. Сильный b2b-инструмент для обучения и управления программами.</p>
             <div class="project-card__footer">
-              <span class="project-card__type" data-i18n="p.pharmznanie.type">CRM · Веб + Мобайл</span>
+              <span class="project-card__type" data-i18n="p.pharmznanie_list.type">CRM-платформа · Веб + Мобайл</span>
               <a href="https://pharmznanie.kg" target="_blank" rel="noopener" class="project-card__visit"
                 data-i18n="p.visit">Посмотреть →</a>
             </div>
@@ -372,7 +532,7 @@
         <!-- ZealOn App -->
         <article class="project-card reveal" data-category="mobile"
           data-gallery='["images/zealon/main-screen.jpg","images/zealon/feed_candidate.jpg","images/zealon/feed_jobs.jpg","images/zealon/profile.png"]'
-          data-gallery-title="ZealOn">
+          data-gallery-title="ZealOn App">
           <div class="project-card__image project-card__image--mobile project-card__image--clickable">
             <img src="images/zealon/main-screen.jpg" alt="ZealOn App" loading="lazy">
             <div class="project-card__overlay project-card__overlay--gallery">
@@ -392,12 +552,10 @@
               <span class="tag tag--django">Django</span>
               <span class="tag tag--ai">AI</span>
             </div>
-            <h4 class="project-card__title">ZealOn</h4>
-            <p class="project-card__desc" data-i18n="p.zealon_app.desc">
-              Стартап-приложение для быстрого найма — «Tinder для соискателей и работодателей». Свайп-механика,
-              видеопитч, AI-функции, геолокация, анонимный просмотр против предвзятости. Многоролевая система, подписки,
-              верификация.
-            </p>
+            <h4 class="project-card__title">ZealOn App</h4>
+            <p class="project-card__desc" data-i18n="p.zealon_app.desc">Стартап-приложение для быстрого найма —
+              «Tinder для соискателей и работодателей». Свайп-механика, видеопитч, AI-функции, геолокация,
+              анонимный просмотр против предвзятости.</p>
             <div class="project-card__features">
               <div class="feature-tag" data-i18n="p.zealon_app.f1">👆 Свайп-найм</div>
               <div class="feature-tag" data-i18n="p.zealon_app.f2">🎥 Видео-питч</div>
@@ -526,28 +684,28 @@
       </div>
       <div class="advantages__grid">
         <div class="adv-card reveal">
-          <div class="adv-card__icon">🚀</div>
-          <h3 class="adv-card__title" data-i18n="adv.1.title">Полный цикл разработки</h3>
-          <p class="adv-card__desc" data-i18n="adv.1.desc">От идеи до продакшена — проектирование, разработка, деплой,
-            поддержка. Не нужно искать отдельных специалистов.</p>
+          <div class="adv-card__icon">🤝</div>
+          <h3 class="adv-card__title" data-i18n="adv.1.title">Индивидуальные консультации по программам лояльности</h3>
+          <p class="adv-card__desc" data-i18n="adv.1.desc">Проектируем и адаптируем программы лояльности под ваши
+            цели: удержание клиентов, рост повторных продаж и повышение LTV.</p>
         </div>
         <div class="adv-card reveal">
-          <div class="adv-card__icon">✅</div>
-          <h3 class="adv-card__title" data-i18n="adv.2.title">Реальные проекты в продакшене</h3>
-          <p class="adv-card__desc" data-i18n="adv.2.desc">Не макеты — работающие продукты с реальными пользователями,
-            загруженные в сторы и приносящие результат бизнесу.</p>
+          <div class="adv-card__icon">📊</div>
+          <h3 class="adv-card__title" data-i18n="adv.2.title">Автоматизация бухгалтерского и финансового учета</h3>
+          <p class="adv-card__desc" data-i18n="adv.2.desc">Внедряем цифровые процессы учета и отчетности, чтобы
+            сократить ручную работу, минимизировать ошибки и ускорить принятие решений.</p>
         </div>
         <div class="adv-card reveal">
-          <div class="adv-card__icon">⚡</div>
-          <h3 class="adv-card__title" data-i18n="adv.3.title">Любая сложность</h3>
-          <p class="adv-card__desc" data-i18n="adv.3.desc">Лендинг за неделю или CRM-система с мобильным приложением —
-            масштабируем решение под ваши задачи.</p>
+          <div class="adv-card__icon">🔎</div>
+          <h3 class="adv-card__title" data-i18n="adv.3.title">Аудит и разработка сайтов</h3>
+          <p class="adv-card__desc" data-i18n="adv.3.desc">Проводим технический и маркетинговый аудит, усиливаем
+            текущие сайты или создаем новые с фокусом на конверсию и рост.</p>
         </div>
         <div class="adv-card reveal">
-          <div class="adv-card__icon">🔍</div>
-          <h3 class="adv-card__title" data-i18n="adv.4.title">SEO и перформанс</h3>
-          <p class="adv-card__desc" data-i18n="adv.4.desc">Оптимизация под поисковые системы, быстрая загрузка, SSR —
-            ваш сайт будет находиться наверху выдачи.</p>
+          <div class="adv-card__icon">🛒</div>
+          <h3 class="adv-card__title" data-i18n="adv.4.title">Разработка интернет-магазинов и маркетплейсов</h3>
+          <p class="adv-card__desc" data-i18n="adv.4.desc">Запускаем e-commerce решения любой сложности: от каталога
+            и корзины до интеграций, аналитики и масштабируемой архитектуры.</p>
         </div>
       </div>
     </div>
@@ -565,18 +723,18 @@
         <div class="contact__info">
           <h3 class="contact__info-title" data-i18n="contact.info_title">Контактная информация</h3>
           <div class="contact__channels">
-            <a href="mailto:info@equus.dev" class="contact__channel">
+            <a href="mailto:equus@electrolab.kg" class="contact__channel">
               <div class="contact__channel-icon">✉️</div>
               <div>
                 <span class="contact__channel-label">Email</span>
-                <span class="contact__channel-value">info@equus.dev</span>
+                <span class="contact__channel-value">equus@electrolab.kg</span>
               </div>
             </a>
-            <a href="tel:+996000000000" class="contact__channel">
+            <a href="tel:+996559666005" class="contact__channel">
               <div class="contact__channel-icon">📞</div>
               <div>
                 <span class="contact__channel-label" data-i18n="contact.phone">Телефон</span>
-                <span class="contact__channel-value">+996 (000) 000-000</span>
+                <span class="contact__channel-value">+996559666005</span>
               </div>
             </a>
             <a href="https://t.me/equus_dev" target="_blank" rel="noopener" class="contact__channel">
@@ -586,18 +744,18 @@
                 <span class="contact__channel-value">@equus_dev</span>
               </div>
             </a>
-            <a href="https://wa.me/996000000000" target="_blank" rel="noopener" class="contact__channel">
+            <a href="https://wa.me/996559666005" target="_blank" rel="noopener" class="contact__channel">
               <div class="contact__channel-icon">💬</div>
               <div>
                 <span class="contact__channel-label">WhatsApp</span>
-                <span class="contact__channel-value">+996 (000) 000-000</span>
+                <span class="contact__channel-value">+996559666005</span>
               </div>
             </a>
           </div>
         </div>
-        <form class="contact__form" id="contactForm" action="https://formsubmit.co/lepri4dw@gmail.com" method="POST">
+        <form class="contact__form" id="contactForm" action="https://formsubmit.co/equus@electrolab.kg" method="POST">
           <!-- FormSubmit config -->
-          <input type="hidden" name="_subject" value="Новая заявка с портфолио Equus">
+          <input type="hidden" name="_subject" value="Новая заявка с портфолио EQUUS">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_template" value="table">
           <input type="text" name="_honey" style="display:none">
@@ -628,10 +786,10 @@
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__logo">
-        <img src="images/equus logo.jpg" alt="Equus Logo" class="nav__logo-icon">
-        <span>Equus</span>
+        <img src="images/equus logo.jpg" alt="EQUUS Logo" class="nav__logo-icon">
+        <span>EQUUS</span>
       </div>
-      <p class="footer__copy">© 2025 Equus. <span data-i18n="footer.rights">Все права защищены.</span></p>
+      <p class="footer__copy">© 2025 EQUUS. <span data-i18n="footer.rights">Все права защищены.</span></p>
     </div>
   </footer>
 
