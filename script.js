@@ -505,18 +505,38 @@ function initContactForm() {
   const form = document.getElementById('contactForm');
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
-    // If FormSubmit is not configured (action contains YOUR_EMAIL_HERE), prevent submit
-    const action = form.getAttribute('action');
-    if (action.includes('YOUR_EMAIL_HERE')) {
-      e.preventDefault();
-      // Fallback: open mailto
-      const name = form.querySelector('#name').value;
-      const email = form.querySelector('#email').value;
-      const message = form.querySelector('#message').value;
-      const subject = encodeURIComponent('Новая заявка с портфолио EQUUS');
-      const body = encodeURIComponent(`Имя: ${name}\nEmail: ${email}\n\nСообщение:\n${message}`);
-      window.location.href = `mailto:equus@electrolab.kg?subject=${subject}&body=${body}`;
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    // Получаем кнопку отправки, чтобы менять текст при загрузке
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn.textContent;
+    
+    // Блокируем кнопку на время отправки
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Отправка...';
+
+    try {
+      const formData = new FormData(form);
+      const action = form.getAttribute('action');
+
+      const response = await fetch(action, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors'
+      });
+
+      // При no-cors мы не можем прочитать ответ (response.ok), 
+      // поэтому считаем, что запрос ушел успешно, если не упал в catch
+      alert('Сообщение успешно отправлено!');
+      form.reset();
+    } catch (error) {
+      console.error('Ошибка при отправке:', error);
+      alert('Произошла ошибка при отправке сообщения. Попробуйте еще раз.');
+    } finally {
+      // Возвращаем кнопку в исходное состояние
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalBtnText;
     }
   });
 }
