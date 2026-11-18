@@ -734,6 +734,10 @@ ul {
   padding: var(--space-sm);
 }
 
+.project-card__image--logo img {
+  background: #fff;
+}
+
 .project-card--featured .project-card__image {
   aspect-ratio: auto;
   min-height: 400px;

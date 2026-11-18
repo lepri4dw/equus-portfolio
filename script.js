@@ -48,6 +48,8 @@ const translations = {
     'p.zealon_land.type': 'Промо-лендинг',
     'p.mashvara_land.desc': 'Промо-лендинг Mashvara с акцентом на ценность сервиса и быстрый путь от интереса к действию.',
     'p.mashvara_land.type': 'Промо-лендинг',
+    'p.1capteka_land.desc': 'Сайт платформы автоматизации для аптек и фарм-компаний с акцентом на продуктовую ценность, ключевые функции учета и быстрый путь к заявке.',
+    'p.1capteka_land.type': 'Корпоративный сайт · Фарм-автоматизация',
     'p.maxmetall.desc': 'Лендинг для металлургической компании с фокусом на SEO-оптимизацию. Сайт выведен в топ поисковой выдачи в своей нише. Дизайн логотипа включён в проект.',
     'p.maxmetall.type': 'Лендинг · SEO',
     'p.maxmetall.seo': '🔍 ТОП выдачи в нише',
@@ -74,6 +76,12 @@ const translations = {
     'p.mashvara_suite.f2': '📊 Понятная аналитика ответов',
     'p.mashvara_suite.f3': '🛡️ Контроль качества данных',
     'p.mashvara_suite.f4': '⚡ Быстрый цикл результатов',
+    'p.1capteka_suite.desc': 'Комплексная платформа для аптек и фарм-компаний: автоматизация учета, мобильное приложение для лояльности и интеграции с внешними системами для ежедневных операций.',
+    'p.1capteka_suite.type': 'Комплексное решение · Веб + Мобайл',
+    'p.1capteka_suite.f1': '🏥 Автоматизация аптечной сети',
+    'p.1capteka_suite.f2': '💳 Программа лояльности и бонусы',
+    'p.1capteka_suite.f3': '🔗 Интеграция с ЭСФ/онлайн ККМ',
+    'p.1capteka_suite.f4': '📱 Мобильное приложение',
     'p.pharmznanie.desc': 'Полноценная CRM-платформа для образовательного портала в фармацевтической отрасли. Включает систему обучения с уроками и курсами, подробную админ-панель, генерацию приказов и удостоверений, программу лояльности, многоролевую систему (куратор, производитель, администратор). Выполнена полная миграция контента и пользователей со старой платформы.',
     'p.pharmznanie.type': 'CRM · Веб + Мобайл',
     'p.pharmznanie_list.desc': 'CRM-платформа для образовательного фарм-портала с курсами, админ-панелью, генерацией документов, программой лояльности и мобильным приложением. Сильный b2b-инструмент для обучения и управления программами.',
@@ -182,6 +190,8 @@ const translations = {
     'p.zealon_land.type': 'Promo Landing',
     'p.mashvara_land.desc': 'Mashvara promo landing page focused on service value and a fast path from interest to action.',
     'p.mashvara_land.type': 'Promo Landing',
+    'p.1capteka_land.desc': 'Website for a pharmacy automation platform focused on clear product value, core inventory workflows, and a fast path to lead submission.',
+    'p.1capteka_land.type': 'Corporate Website · Pharma Automation',
     'p.maxmetall.desc': 'Landing page for a metallurgical company with SEO-first approach. Website ranked among top search results in its niche. Logo design included.',
     'p.maxmetall.type': 'Landing · SEO',
     'p.maxmetall.seo': '🔍 TOP search results in niche',
@@ -208,6 +218,12 @@ const translations = {
     'p.mashvara_suite.f2': '📊 Clear response analytics',
     'p.mashvara_suite.f3': '🛡️ Data quality control',
     'p.mashvara_suite.f4': '⚡ Fast feedback cycles',
+    'p.1capteka_suite.desc': 'Integrated platform for pharmacy and pharma companies: accounting automation, loyalty mobile app, and external integrations for daily operations.',
+    'p.1capteka_suite.type': 'Integrated Solution · Web + Mobile',
+    'p.1capteka_suite.f1': '🏥 Pharmacy network automation',
+    'p.1capteka_suite.f2': '💳 Loyalty and bonus program',
+    'p.1capteka_suite.f3': '🔗 E-invoice and online cash register integration',
+    'p.1capteka_suite.f4': '📱 Mobile application',
     'p.pharmznanie.desc': 'Full-featured CRM platform for an educational portal in the pharmaceutical industry. Includes learning management system with courses and lessons, detailed admin panel, document generation (orders, certificates), loyalty program, multi-role system (curator, manufacturer, admin). Flutter mobile app published on Google Play. Full content and user migration from legacy platform.',
     'p.pharmznanie.type': 'CRM · Web + Mobile',
     'p.pharmznanie_list.desc': 'CRM platform for a pharmaceutical education portal with courses, admin panel, document generation, loyalty program, and mobile application. A solid B2B tool for education workflows and program management.',
@@ -489,18 +505,38 @@ function initContactForm() {
   const form = document.getElementById('contactForm');
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
-    // If FormSubmit is not configured (action contains YOUR_EMAIL_HERE), prevent submit
-    const action = form.getAttribute('action');
-    if (action.includes('YOUR_EMAIL_HERE')) {
-      e.preventDefault();
-      // Fallback: open mailto
-      const name = form.querySelector('#name').value;
-      const email = form.querySelector('#email').value;
-      const message = form.querySelector('#message').value;
-      const subject = encodeURIComponent('Новая заявка с портфолио EQUUS');
-      const body = encodeURIComponent(`Имя: ${name}\nEmail: ${email}\n\nСообщение:\n${message}`);
-      window.location.href = `mailto:equus@electrolab.kg?subject=${subject}&body=${body}`;
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    // Получаем кнопку отправки, чтобы менять текст при загрузке
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn.textContent;
+    
+    // Блокируем кнопку на время отправки
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Отправка...';
+
+    try {
+      const formData = new FormData(form);
+      const action = form.getAttribute('action');
+
+      const response = await fetch(action, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors'
+      });
+
+      // При no-cors мы не можем прочитать ответ (response.ok), 
+      // поэтому считаем, что запрос ушел успешно, если не упал в catch
+      alert('Сообщение успешно отправлено!');
+      form.reset();
+    } catch (error) {
+      console.error('Ошибка при отправке:', error);
+      alert('Произошла ошибка при отправке сообщения. Попробуйте еще раз.');
+    } finally {
+      // Возвращаем кнопку в исходное состояние
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalBtnText;
     }
   });
 }
